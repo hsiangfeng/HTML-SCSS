@@ -1,0 +1,37 @@
+@mixin breakpoint-xl(){
+    @media (max-width:1200px) {
+        @content;
+    }
+}
+@mixin breakpoint-lg(){
+    @media (max-width:992px){
+        @content;
+    }
+}
+@mixin breakpoint-md(){
+    @media (max-width:768px) {
+        @content;
+    }
+}
+@mixin breakpoint-sm(){
+    @media (max-width:576px){
+        @content;
+    }
+}
+@mixin breakpoint-xs(){
+    @media (max-width:375px) {
+        @content;
+    }
+}
+@mixin breakpoint-x($name,$breakPoint){
+    @if($name == 'desktop'){
+        @media (max-width:$breakPoint) {
+            @content;
+        }
+    }
+    @else if($name == 'mobile'){
+        @media (min-width:$breakPoint) {
+            @content;
+        }
+    }
+}

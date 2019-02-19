@@ -1,0 +1,95 @@
+@import "variable";
+@import "mixin";
+
+.connection{
+  background-image: linear-gradient(to top right,#00644b,#009872);
+  .connection-body{
+    padding: 80px 0;
+  }
+  h2{
+    @include title-h(2);
+    text-align: center;
+    color:$dark;
+    @include breakpoint-md(){
+      margin-bottom:10px;
+    }
+  }
+  .from{
+    @include d-flex();
+    @include justify-content-center();
+    @include align-items-center();
+    @include breakpoint-md(){
+      display: block;
+    }
+  }
+  .from-group{
+    width: 40%;
+    padding: 10px;
+    @include breakpoint-md(){
+      width:90%;
+      margin:0 auto;
+      padding:0;
+    }
+  }
+  label{
+    display: block;
+    color: $dark;
+    @include title-h(5);
+  }
+  input{
+    display: block;
+    width: 100%;
+    height: 44px;
+    border:0;
+    border-radius: 5px;
+    padding: 5px;
+    @include breakpoint-md(){
+      width:100%;
+    }
+  }
+  #textarea{
+    height: 215px;
+    width: 40%;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    @include breakpoint-md(){
+      width:90%;
+      margin:0 auto;
+      display: block;
+    }
+  }
+  @include input-focus();
+}
+.btn-group{
+  margin-top: 10px;
+  text-align: right;
+  button{
+    border: 0;
+    background-color: $defalut;
+    color:$dark;
+    font-weight: bold;
+    height: 44px;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s;
+    letter-spacing: normal ;
+    &:hover{
+      background-color: $dark;
+      color:$defalut;
+    }
+    @include breakpoint-md(){
+      width: 50%;
+      display: inline-block;
+      margin-right:10px;
+      &:nth-child(2){
+        margin-right: 0;
+      }
+    }
+  }
+  @include breakpoint-md(){
+    text-align: center;
+    display: flex;
+  }
+}

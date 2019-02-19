@@ -1,0 +1,37 @@
+@import "variable";
+@import "mixin";
+
+.course-table{
+  padding-top: 20px;
+  h2{
+    @include title-h(2);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .table{
+    width: 90%;
+    text-align: left;
+    margin:0 auto;
+  }
+  th{
+    @include title-h(6);
+    font-weight: bold;
+    line-height: 40px;
+    background-color: $dark;
+  }
+  tr{
+    border-bottom:1px solid $gray-border;
+    line-height: 40px;
+    &:hover{
+      background-color: $dark;
+    }
+  }
+  .title-td{
+    @include title-h(6);
+    font-weight: bold;
+  }
+  .best{
+    color:$defalut;
+    font-weight: blod;
+  }
+}

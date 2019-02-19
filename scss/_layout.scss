@@ -1,0 +1,132 @@
+@import "variable";
+@import "browser";
+@import "mixin";
+
+%aLinknone {
+  @include text-border-none();
+}
+.container{
+  @include container();
+}
+.topmanu{
+  height: 26px;
+  background-color: $dark;
+  ul{
+    @include d-flex();
+    justify-content: end;
+    @include align-items-center();
+    height: 100%;
+  }
+  .facebook{
+    color:$facebook;
+    font-weight: bold;
+    border-right: 3px solid $gray-border;
+    padding-right: 20px;
+    @extend %aLinknone;
+  }
+  .twitter{
+    color:$twitter;
+    padding-left: 20px;
+    font-weight: bold;
+    @extend %aLinknone;
+  }
+}
+.navber{
+  @include d-flex();
+  @include justify-content-between();
+  @include align-items-center();
+  margin: 10px 0;
+  .logo{
+    background-image: url('../img/logo.png');
+    width: 170px;
+    height: 36px;
+    @include text-hide();
+  }
+  .manu{
+    @include d-flex();
+    @include align-items-center();
+  }
+  li{
+    border-right: 3px solid $dark;
+    padding: 10px;
+  }
+  li a{
+    color:$defalut;
+    padding: 10px;
+    @extend %aLinknone;
+    font-weight: bold;
+    transition: all .6s;
+    display: block;
+    border-bottom: 3px solid transparent;
+    &:hover{
+      border-bottom: 3px solid $defalut;
+    }
+  }
+  @include breakpoint-md(){
+    display: none;
+  }
+}
+.m-navber{
+  display: none;
+  .navber-group{
+    width: 100%;
+    @include d-flex();
+    @include justify-content-between();
+    @include align-items-center();
+  }
+  .m-btn{
+    color: $defalut;
+  }
+  a{
+    @extend %aLinknone;
+  }
+  .m-manu{
+    display: block;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    // position: absolute;
+    // top:38.2px;
+    // left: 0;
+    // right: 0;
+  }
+  li a{
+    width: 100%;
+    padding:20px 0;
+    display: block;
+    text-align: center;
+    color: $dark;
+    background-color: $defalut;
+    transition: all 0.5s;
+    &:hover{
+      color: $defalut;
+      background-color: $dark;
+    }
+  }
+  @include breakpoint-md(){
+    @include d-flex();
+    @include align-items-center();
+    flex-direction: column;
+    margin: 10px 0;
+  }
+}
+.open .m-manu{
+  height: 168px;
+  transition: all .5s;
+}
+.footer{
+  @include d-flex();
+  @include justify-content-between();
+  margin-top:10px;
+  .footer-a{
+    color:$pink;
+    @extend %aLinknone;
+  }
+  .footer-logo{
+    background-image: url('../img/footerlogo.png');
+    width: 168px;
+    height: 36px;
+    @include text-hide();
+  }
+}
