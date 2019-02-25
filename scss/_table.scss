@@ -4,7 +4,7 @@
 .course-table{
   padding-top: 20px;
   h2{
-    @include title-h(2);
+    @include title-h(2, 0);
     text-align: center;
     margin-bottom: 10px;
   }
@@ -14,7 +14,7 @@
     margin:0 auto;
   }
   th{
-    @include title-h(6);
+    @include title-h(6, 0);
     font-weight: bold;
     line-height: 40px;
     background-color: $dark;
@@ -27,11 +27,11 @@
     }
   }
   .title-td{
-    @include title-h(6);
+    @include title-h(6, 0);
     font-weight: bold;
   }
   .best{
     color:$defalut;
-    font-weight: blod;
+    font-weight: bold;
   }
 }

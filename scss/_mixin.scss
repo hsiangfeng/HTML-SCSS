@@ -12,27 +12,25 @@
 @mixin box-sizing(){
   box-sizing: border-box;
 }
-@mixin title-h($i){
-  @if($i == 1){
-    font-size:$fontSize * 2.5;
+@mixin title-h($i,$size){
+  @if($i == 1) {
+    font-size: $fontSize * 2.5;
+  }@else if($i == 2) {
+    font-size: $fontSize * 2.0;
+  }@else if($i == 3) {
+    font-size: $fontSize * 1.75;
+  }@else if($i == 4) {
+    font-size: $fontSize * 1.5;
+  }@else if($i == 5) {
+    font-size: $fontSize * 1.25;
+  }@else if($i == 6) {
+    font-size: $fontSize;
+  }@else if($i == 0 ){
+    font-size: $fontSize * $size;
   }
-  @else if($i == 2){
-    font-size:$fontSize * 2;
-  }
-  @else if($i == 3){
-    font-size:$fontSize * 1.75;
-  }
-  @else if($i == 4){
-    font-size:$fontSize * 1.5;
-  }
-  @else if($i == 5){
-    font-size:$fontSize * 1.25;
-  }
-  @else if($i == 6){
-    font-size:$fontSize * 1;
-  }
-  font-weight: 500;
-  line-height: 1.2;
+}
+@mixin title-x($size){
+  font-size: $fontSize * $size;
 }
 @mixin img-fluid(){
   max-width: 100%;

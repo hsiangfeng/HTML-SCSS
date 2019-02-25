@@ -7,7 +7,7 @@
     padding: 80px 0;
   }
   h2{
-    @include title-h(2);
+    @include title-h(2, 0);
     text-align: center;
     color:$dark;
     @include breakpoint-md(){
@@ -34,7 +34,7 @@
   label{
     display: block;
     color: $dark;
-    @include title-h(5);
+    @include title-h(5, 0);
   }
   input{
     display: block;

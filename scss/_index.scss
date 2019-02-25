@@ -57,7 +57,7 @@
     margin: 0 auto;
   }
   h3{
-    @include title-h(3);
+    @include title-h(3, 0);
     text-align: center;
     margin: 10px 0;
   }
