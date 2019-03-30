@@ -1,7 +1,7 @@
 # HTML-SCSS
 > 此版本使用SCSS作為開發。 
-![](https://i.imgur.com/cj3wbVR.png)
 
+![](https://i.imgur.com/cj3wbVR.png)
 ## Demo 
 [https://hsiangfeng.github.io/HTML-SCSS/](https://hsiangfeng.github.io/HTML-SCSS/)
 ## 設計稿
